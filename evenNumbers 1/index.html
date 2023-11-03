@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>even numbers</title>
+  </head>
+  <body>
+    <h1>
+      Თხოვეთ მომხმარებელს რომ შემოიტანოს რიცხვი 1 დან 100 მდე,დაბეჭდეთ ყველა
+      კენტი რიცხვი 0 დან მომხმარებლის მიერ შემოყვანილ რიცხვამდე
+    </h1>
+
+    <script>
+      let n = parseInt(prompt("Enter a number from 1 to -100:"));
+
+      if (n >= 1 && n <= 100) {
+        for (let i = 1; i <= n; i++) {
+          if (i % 2 !== 0) {
+            console.log(i);
+          }
+        }
+      } else {
+        console.log(
+          "The entered number is not within the specified range (1 to -100)."
+        );
+      }
+    </script>
+  </body>
+</html>

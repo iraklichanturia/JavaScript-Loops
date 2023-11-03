@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Numbers</title>
+  </head>
+  <body>
+    <h1>
+      Თხოვეთ მომხმარებელს რომ შემოიყვანოს რიცხვი 300 დან 500 მდე, შემდგომ
+      დააგენერირეთ რენდომული რიცხვი 50 დან 100 მდე და დაბეჭდეთ ყველა 2 ის ჯერადი
+      რიცხვი რენდომულად დაგენერირებულ რიცხვსა და მომხმარებლის მიერ შემოყვანილ
+      რიცხვს შორის
+    </h1>
+    <script>
+      let userNumber = Number(prompt("Please enter a number from 300 to 500"));
+
+      if (userNumber >= 300 && userNumber <= 500) {
+        let randomNumber = Math.floor(Math.random() * (100 - 50 + 1) + 50);
+        console.log('random number is' , randomNumber);
+        for (let i = randomNumber; i <= userNumber; i++) {
+          if (i % 2 == 0) {
+            console.log(
+              "Multiples of two between the random number and the user number:",
+              i
+            );
+          }
+        }
+      } else {
+        console.log("Enter a correct number within the range of 300 to 500.");
+      }
+    </script>
+  </body>
+</html>
